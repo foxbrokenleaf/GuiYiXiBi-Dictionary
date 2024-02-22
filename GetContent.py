@@ -18,10 +18,11 @@ class SWC:
         self.__Logs.Log(string)
     
     def SetSearchObject( self ,string ):
-        self.stringUrl = "https://name-power.net/fn/{}}.html".format(string)
+        self.stringUrl = "https://name-power.net/fn/{}.html".format(string)
+        print(self.stringUrl)
         
     def SaveLocal( self ):
-        with open("Temp",'w',encoding="utf-8") as f:
+        with open("page.html",'w',encoding="utf-8") as f:
             f.write(self.__res.content.decode())
     
     def GetData( self ):
@@ -39,6 +40,3 @@ class SWC:
                 print("".center(100,'-'))
                 print(temp)
                 print("".center(100,'-'))
-
-a = SWC()
-a.Paren()
